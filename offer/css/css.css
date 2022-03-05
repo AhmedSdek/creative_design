@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../33.jpg);
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* small screen */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* larg */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/*header*/
+
+header {
+  padding: 20px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* medium */
+
+header .logo {
+  width: 140px;
+  border-radius: 20px;
+}
+
+header .links {
+  position: relative;
+}
+
+header .links:hover .icon {
+  color: #ff9900;
+}
+
+header .container .icon {
+  font-size: 35px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: rgb(199, 199, 199);
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+}
+
+header .links ul::after {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent rgb(199, 199, 199) transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+
+header .links:hover ul {
+  display: block;
+}
+
+header .links ul li a {
+  display: block;
+  padding: 15px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: 0.4s;
+  text-transform: capitalize;
+}
+
+header .links ul li a:hover {
+  padding-left: 30px;
+  color: #cf7e04;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid rgb(180, 180, 180);
+}
+
+/*hed*/
+
+.off-titel h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.off-titel .line {
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 150px;
+  background: #ff9900;
+  transition: 0.5s;
+  margin-top: -20px;
+}
+
+.off-titel:hover .line {
+  width: 300px;
+}
+
+.box .offers-pho {
+  padding: 20px;
+}
+
+.box .offers-pho:hover img {
+  box-shadow: 10px 10px 10px black;
+}
+
+.box .offers-pho img {
+  width: 100%;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.box .off-ofer {
+  width: 100%;
+  padding: 20px;
+  height: 400px;
+}
+
+.box .off-ofer embed {
+  display: block;
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  border-radius: 20px;
+}
